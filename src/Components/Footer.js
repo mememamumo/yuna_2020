@@ -6,6 +6,8 @@ const Footer = styled.footer`
   background-color: ${(props) => props.theme.bgBlackColor};
   color: ${(props) => props.theme.lightGray};
   width: 100%;
+  margin-top: 80px;
+  font-size: 18px;
 `;
 
 const FooterWrapper = styled.div`
@@ -29,7 +31,7 @@ const EFooterColumn = styled(FooterColumn)`
 
 const Iam = styled.li`
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 `;
 
 const List = styled.li`
@@ -80,7 +82,7 @@ export default () => {
             <Text>carnivalss@naver.com</Text>
           </List>
           <List>
-            <Title>Name</Title>
+            <Title>NAME</Title>
             <Text>YUNA LEE / 이유나</Text>
           </List>
         </EFooterColumn>

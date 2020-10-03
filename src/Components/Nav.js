@@ -6,13 +6,12 @@ const circle__ani = keyframes`
 	0% {
 		left: -100px;
 		width: 60px;
-		height:24px;
 	}
 	50% {
-		left: -30px;
+		left: -10px;
 	}
 	100% {
-		left:-30px;
+    left:-20px;
 	}
 `;
 
@@ -20,22 +19,24 @@ const ENavLink = styled(NavLink)`
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin: 3px 0;
+  margin: 6px 0;
+  padding: 0 6px;
   position: relative;
   &.active {
     color: ${(props) => props.theme.lightGray};
+    background-color: ${(props) => props.theme.pointHoverColor};
   }
   &.active::before {
     color: red;
     content: "";
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: ${(props) => props.theme.pointHoverColor};
     position: absolute;
     display: inline-block;
-    left: -30px;
-    top: 3px;
+    left: -20px;
+    top: 1px;
     animation: ${circle__ani} 0.3s;
   }
 `;

@@ -3,8 +3,9 @@ export default {
   bgColor: "#fff",
   bgBlackColor: "#111",
   black: "#000",
-  lightGray: "#ddd",
+  white: "#fff",
+  lightGray: "#dfdfdf",
   hoverBlack: "#c9c9c9",
-  pointColor: "yellow",
-  pointHoverColor: "#C0B9DA"
+  pointColor: "#F4D300",
+  pointHoverColor: "#00E7C2"
 };
