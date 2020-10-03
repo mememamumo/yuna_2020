@@ -10,17 +10,22 @@ export default createGlobalStyle`
 	html, body {
 		position: relative;
 		width: 100%;
-		height: 100vh;
 	}
 	body {
 		background-color: ${(props) => props.theme.bgColor};
 		color: ${(props) => props.theme.black};
 		font-size: 14px;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		min-height: 100vh;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
 	}
 	a {
+		display: block;
 		color: ${(props) => props.theme.black};
 		text-decoration: none;
+		transition: 0.3s;
 		&:hover {
 			color: ${(props) => props.theme.hoverBlack};
 		}
@@ -36,5 +41,9 @@ export default createGlobalStyle`
 			color: ${(props) => props.theme.blue};
 			font-weight: 700;
 		}
+	}
+	img {
+		width: 100%;
+		height: auto;
 	}
 `;
