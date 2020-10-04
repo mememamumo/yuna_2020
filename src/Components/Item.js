@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 const thumb__ani = keyframes`
 	0% {
@@ -14,11 +15,11 @@ const Wrapper = styled.li`
   width: calc(100% margin);
   display: flex;
   flex-direction: column;
-  &:nth-child(odd) {
-    margin: 20px 20px 20px 0;
-  }
   &:nth-child(2n) {
     margin: 20px 0 20px 20px;
+  }
+  &:nth-child(odd) {
+    margin: 20px 20px 20px 0;
   }
 `;
 
@@ -73,25 +74,29 @@ const Thumbnail = styled.div`
   }
 `;
 
-export default (props) => {
+const Item = (props) => {
   console.log(props);
   return (
     <Wrapper>
-      <Thumbnail bg={props.thumbnail}></Thumbnail>
-      <Header>
-        <HeaderColumn>
-          <Title>TITLE</Title>
-          <Text>{props.title}</Text>
-        </HeaderColumn>
-        <HeaderColumn>
-          <ETitle>SKILL</ETitle>
-          <Text>
-            {props.skills.map((skill, index) => (
-              <List key={index}>{skill}</List>
-            ))}
-          </Text>
-        </HeaderColumn>
-      </Header>
+      <Link to={`/item/${props.id}`}>
+        <Thumbnail bg={props.thumbnail}></Thumbnail>
+        <Header>
+          <HeaderColumn>
+            <Title>TITLE</Title>
+            <Text>{props.title}</Text>
+          </HeaderColumn>
+          <HeaderColumn>
+            <ETitle>SKILL</ETitle>
+            <Text>
+              {props.skills.map((skill, index) => (
+                <List key={index}>{skill}</List>
+              ))}
+            </Text>
+          </HeaderColumn>
+        </Header>
+      </Link>
     </Wrapper>
   );
 };
+
+export default Item;

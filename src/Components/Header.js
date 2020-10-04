@@ -6,7 +6,9 @@ import Nav from "./Nav";
 
 const Header = styled.header`
   width: 100%;
-  margin: 40px 0;
+  position: fixed;
+  top: 40px;
+  z-index: 10;
 `;
 
 const HeaderWrapper = styled.div`

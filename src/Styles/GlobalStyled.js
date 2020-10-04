@@ -20,6 +20,7 @@ export default createGlobalStyle`
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
+		padding-top: 200px;
 	}
 	a {
 		display: block;
