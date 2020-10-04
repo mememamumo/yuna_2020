@@ -133,7 +133,6 @@ const Img = styled.img`
 `;
 
 const SeePost = () => {
-  console.log(data);
   return (
     <div>
       {data.map((item) => {

@@ -5,6 +5,7 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
+import Loader from "./Loader";
 
 const Home = lazy(() => import("../Routes/Home"));
 const About = lazy(() => import("../Routes/About"));
@@ -12,7 +13,7 @@ const Project = lazy(() => import("../Routes/Project"));
 const Contact = lazy(() => import("../Routes/Contact"));
 const SeeItem = lazy(() => import("../Routes/SeeItem"));
 
-const renderLoader = () => <div>Loading...</div>;
+const renderLoader = () => <Loader />;
 
 const AppRouter = () => (
   <Router>
