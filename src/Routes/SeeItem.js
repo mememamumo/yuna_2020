@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import data from "../db";
 import { Github, Link } from "../Components/Icons";
 
@@ -80,7 +81,7 @@ const DemoLink = styled.a`
 `;
 
 const Text = styled.span`
-  margin-left: 6px;
+  margin-left: 8px;
 `;
 
 const WhatIDo = styled.div`
@@ -176,55 +177,60 @@ const MapToItem = withRouter(
     return (
       <>
         {id === page && (
-          <Wrapper>
-            <ItemBox>
-              <MetaHeader bg={thumbnail}>
-                <Area>
-                  <Title>
-                    {title} / {year}
-                  </Title>
-                </Area>
-              </MetaHeader>
-              <MetaContainer>
-                <MetaInfo>
-                  <MetaLink>
-                    <Githubs>
-                      {github.map((git, index) => (
-                        <GithubLink key={index} href={git} target="_blank">
-                          <Github size={22} />
-                          <Text key={index}>{git.split("/")[4]}</Text>
-                        </GithubLink>
+          <>
+            <Helmet>
+              <title>{title} | Yuna Lee 2020</title>
+            </Helmet>
+            <Wrapper>
+              <ItemBox>
+                <MetaHeader bg={thumbnail}>
+                  <Area>
+                    <Title>
+                      {title} / {year}
+                    </Title>
+                  </Area>
+                </MetaHeader>
+                <MetaContainer>
+                  <MetaInfo>
+                    <MetaLink>
+                      <Githubs>
+                        {github.map((git, index) => (
+                          <GithubLink key={index} href={git} target="_blank">
+                            <Github size={22} />
+                            <Text key={index}>{git.split("/")[4]}</Text>
+                          </GithubLink>
+                        ))}
+                      </Githubs>
+                      <DemoLink href={link} target="_blank">
+                        <Link size={20} />
+                        <Text>사이트 보기</Text>
+                      </DemoLink>
+                    </MetaLink>
+                    <WhatIDo>
+                      <DoList>Front-end: {front}</DoList>
+                      {back ? <DoList>Back-end: {back}</DoList> : null}
+                    </WhatIDo>
+                    <Skills>
+                      <SkillTitle>Skills</SkillTitle>
+                      {skills.map((skill, index) => (
+                        <List key={index}>{skill}</List>
                       ))}
-                    </Githubs>
-                    <DemoLink href={link} target="_blank">
-                      <Link size={20} />
-                      <Text>사이트 보기</Text>
-                    </DemoLink>
-                  </MetaLink>
-                  <WhatIDo>
-                    <DoList>Front-end: {front}</DoList>
-                    {back ? <DoList>Back-end: {back}</DoList> : null}
-                  </WhatIDo>
-                  <Skills>
-                    <SkillTitle>Skills</SkillTitle>
-                    {skills.map((skill, index) => (
-                      <List key={index}>{skill}</List>
+                    </Skills>
+                    <Description>{description}</Description>
+                  </MetaInfo>
+                  <MetaIamges>
+                    {images.map((image, index) => (
+                      <Img
+                        key={index}
+                        src={image}
+                        alt={`${title}의 이미지 ${index + 1}`}
+                      />
                     ))}
-                  </Skills>
-                  <Description>{description}</Description>
-                </MetaInfo>
-                <MetaIamges>
-                  {images.map((image, index) => (
-                    <Img
-                      key={index}
-                      src={image}
-                      alt={`${title}의 이미지 ${index + 1}`}
-                    />
-                  ))}
-                </MetaIamges>
-              </MetaContainer>
-            </ItemBox>
-          </Wrapper>
+                  </MetaIamges>
+                </MetaContainer>
+              </ItemBox>
+            </Wrapper>
+          </>
         )}
       </>
     );
