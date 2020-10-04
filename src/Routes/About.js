@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import data from "../images";
+import Skill from "../Components/Skill";
 
 const Wrapper = styled.div``;
 
@@ -22,7 +23,11 @@ const Text = styled.div`
   font-size: 18px;
 `;
 
-const Skills = styled.ul``;
+const Skills = styled.ul`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 export default () => {
   return (
@@ -46,7 +51,9 @@ export default () => {
           <Text>컬러리스트 산업기사</Text>
           <Text>GTQ 포토샵 1급 한국생산성본분 발급</Text>
         </Certificate>
-        <Skills>{/* <Skill></Skill> */}</Skills>
+        <Skills>
+          <Skill />
+        </Skills>
       </Info>
     </Wrapper>
   );
