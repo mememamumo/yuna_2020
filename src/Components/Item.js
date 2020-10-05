@@ -11,6 +11,10 @@ const thumb__ani = keyframes`
 	}
 `;
 
+const ani__bounce = keyframes`
+  0% { transform: translateY(-50px); opacity: 0; }
+`;
+
 const Wrapper = styled.li`
   width: calc(100% margin);
   display: flex;
@@ -21,6 +25,7 @@ const Wrapper = styled.li`
   &:nth-child(odd) {
     margin: 20px 20px 20px 0;
   }
+  animation: ${ani__bounce} 1s;
 `;
 
 const Header = styled.div`
@@ -59,6 +64,10 @@ const List = styled.span`
   }
 `;
 
+const Wrap = styled.div`
+  animation: ${ani__bounce} 1s;
+`;
+
 const Thumbnail = styled.div`
   position: relative;
   width: 100%;
@@ -79,7 +88,9 @@ const Item = (props) => {
   return (
     <Wrapper>
       <Link to={`/item/${props.id}`}>
-        <Thumbnail bg={props.thumbnail}></Thumbnail>
+        <Wrap>
+          <Thumbnail bg={props.thumbnail}></Thumbnail>
+        </Wrap>
         <Header>
           <HeaderColumn>
             <Title>TITLE</Title>

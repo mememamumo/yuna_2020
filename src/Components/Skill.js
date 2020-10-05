@@ -21,8 +21,11 @@ const Wrapper = styled.li`
   justify-content: center;
   align-items: center;
   &:not(:last-child) {
-    margin-right: 14px;
+    margin-right: 7px;
+    margin-left: 7px;
   }
+  width: 72px;
+  margin-bottom: 20px;
 `;
 
 const Img = styled.img`
@@ -35,7 +38,7 @@ const Img = styled.img`
 
 const Text = styled.div`
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 14px;
 `;
 
 export default ({ size = "md" }) => {
