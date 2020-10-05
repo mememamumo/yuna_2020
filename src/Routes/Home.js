@@ -30,6 +30,36 @@ const ani__show2 = keyframes`
   0% { opacity: 0; left: -300px;}
 `;
 
+const ani__rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const ani__rotate2 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+`;
+
+const ani__bounce2 = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 const Wrapper = styled.div`
   min-height: calc(100vh - 440px);
   margin-bottom: 80px;
@@ -124,6 +154,72 @@ const SmallImage = styled.img`
   animation: ${ani__show} 3s;
 `;
 
+const Triangle = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-bottom: 258px solid black;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  transform-origin: 50% 65%;
+  animation: ${ani__rotate} 6s linear infinite;
+  p {
+    position: relative;
+    top: 3.5px;
+    left: -147px;
+    border-bottom: 252.84px solid white;
+    border-left: 147px solid transparent;
+    border-right: 147px solid transparent;
+  }
+`;
+
+const Triangle2 = styled.div`
+  position: absolute;
+  bottom: 350px;
+  left: 30px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-bottom: 258px solid black;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  transform-origin: 50% 65%;
+  animation: ${ani__rotate2} 6s linear infinite;
+  p {
+    position: relative;
+    top: 3.5px;
+    left: -147px;
+    border-bottom: 252.84px solid white;
+    border-left: 147px solid transparent;
+    border-right: 147px solid transparent;
+  }
+`;
+
+const Circle = styled.div`
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform-origin: 50% 65%;
+  animation: ${ani__rotate2} 3s linear infinite;
+`;
+
+const Square = styled.div`
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  width: 20px;
+  height: 100px;
+  background-color: #000;
+  animation: ${ani__bounce2} 3s linear infinite;
+`;
+
 export default () => {
   return (
     <>
@@ -133,7 +229,10 @@ export default () => {
       <Wrapper>
         <Main>
           <Name>YUNA LEE</Name>
-          <Title>FRONT-END DEVELOPER</Title>
+          <Title>
+            FRONT-END DEVELOPER
+            <Square />
+          </Title>
           <SubTitle>
             <FirstWrap>
               <Text>
@@ -168,6 +267,13 @@ export default () => {
           <BigImage src={data[0]} alt="배경 이미지 1" />
           <SmallImage src={data[1]} alt="배경 이미지 2" />
         </ImageWrap>
+        <Triangle>
+          <p></p>
+        </Triangle>
+        <Triangle2>
+          <p></p>
+        </Triangle2>
+        <Circle />
       </Wrapper>
     </>
   );
