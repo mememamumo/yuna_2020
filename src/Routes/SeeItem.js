@@ -45,7 +45,7 @@ const MetaInfo = styled.div`
 `;
 
 const MetaLink = styled.div`
-  margin: 20px 0 30px;
+  margin: 20px 0 50px;
 `;
 
 const Githubs = styled.div`
@@ -72,12 +72,26 @@ const DemoLink = styled.a`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  display: inline-block;
   svg {
     transition: 0.3s;
   }
   &:hover svg {
     fill: ${(props) => props.theme.pointHoverColor};
   }
+  &:hover p {
+    opacity: 1;
+    color: ${(props) => props.theme.black};
+  }
+`;
+
+const Notice = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  // background-color: ${(props) => props.theme.lightGray};
+  padding: 4px 8px;
+  opacity: 0;
 `;
 
 const Text = styled.span`
@@ -132,7 +146,7 @@ const Img = styled.img`
   margin-top: 10px;
 `;
 
-const SeePost = () => {
+const SeeItem = () => {
   return (
     <div>
       {data.map((item) => {
@@ -150,6 +164,7 @@ const SeePost = () => {
             skills={item.skills}
             github={item.github}
             link={item.link}
+            notice={item.notice}
           />
         );
       })}
@@ -170,7 +185,8 @@ const MapToItem = withRouter(
     description,
     skills,
     github,
-    link
+    link,
+    notice
   }) => {
     const page = pathname.split("/")[2];
     return (
@@ -203,6 +219,7 @@ const MapToItem = withRouter(
                       <DemoLink href={link} target="_blank">
                         <Link size={20} />
                         <Text>사이트 보기</Text>
+                        {notice ? <Notice>{notice}</Notice> : null}
                       </DemoLink>
                     </MetaLink>
                     <WhatIDo>
@@ -236,4 +253,4 @@ const MapToItem = withRouter(
   }
 );
 
-export default SeePost;
+export default SeeItem;

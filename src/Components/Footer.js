@@ -6,8 +6,9 @@ const Footer = styled.footer`
   background-color: ${(props) => props.theme.bgBlackColor};
   color: ${(props) => props.theme.lightGray};
   width: 100%;
-  margin-top: 80px;
   font-size: 18px;
+  position: relative;
+  z-index: 1;
 `;
 
 const FooterWrapper = styled.div`
@@ -88,7 +89,7 @@ export default () => {
         </EFooterColumn>
         <Column>
           <FooterLink href="https://github.com/mememamumo" target="_blank">
-            <Github size={26} />
+            <Github size={28} />
           </FooterLink>
           <Copyright>
             COPYRIGHT &copy; {new Date().getFullYear()} YUNA_LEE

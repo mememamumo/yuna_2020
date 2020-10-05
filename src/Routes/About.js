@@ -19,6 +19,7 @@ const AboutContainer = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   padding-top: 50px;
+  margin-bottom: 80px;
 `;
 
 const AvatarColumn = styled.div`
@@ -40,8 +41,8 @@ const InfoColumn = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   align-self: end;
-  text-align: left;
-  padding-top: 40px;
+  text-align: right;
+  padding-right: 40px;
   font-weight: 700;
 `;
 
@@ -53,10 +54,9 @@ const Name = styled.div`
 const Title = styled.div`
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 3px solid ${(props) => props.theme.black};
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 14px;
+  background-color: ${(props) => props.theme.lightGray};
+  padding: 4px 6px;
+  margin-bottom: 30px;
   letter-spacing: 1px;
 `;
 
@@ -67,13 +67,13 @@ const Experience = styled.div`
 `;
 
 const Certificate = styled.div`
-  margin-top: 40px;
+  margin-top: 50px;
 `;
 
-const Text = styled.div`
-  font-weight: 700;
-  font-size: 19px;
-  margin-top: 13px;
+const Text = styled.p`
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 12px;
 `;
 
 const Skills = styled.ul`
@@ -83,11 +83,16 @@ const Skills = styled.ul`
   margin-top: 40px;
   flex-wrap: wrap;
   animation: ${ani__bounce} 1s;
-  border-top: 3px solid ${(props) => props.theme.black};
+  border-top: 1px solid ${(props) => props.theme.black};
   padding-top: 30px;
 `;
 
 const ESkill = styled(Skill)``;
+
+const Img = styled.img`
+  margin-top: 40px;
+  animation: ${ani__bounce} 1.5s;
+`;
 
 export default () => {
   return (
@@ -120,6 +125,7 @@ export default () => {
               <Text>컬러리스트 산업기사</Text>
               <Text>GTQ 포토샵 1급 한국생산성본분 발급</Text>
             </Certificate>
+            <Img src={data[1]} alt="이미지" />
           </Info>
         </InfoColumn>
       </AboutContainer>

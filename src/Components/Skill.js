@@ -37,7 +37,7 @@ const Img = styled.img`
 `;
 
 const Text = styled.div`
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 14px;
 `;
 

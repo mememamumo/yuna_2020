@@ -31,7 +31,8 @@ const ani__show2 = keyframes`
 `;
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 380px);
+  min-height: calc(100vh - 440px);
+  margin-bottom: 80px;
 `;
 
 const Main = styled.div`
