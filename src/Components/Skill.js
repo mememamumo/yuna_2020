@@ -5,7 +5,7 @@ import data from "../logos";
 const getSize = (size) => {
   let number;
   if (size === "sm") {
-    number = 45;
+    number = 55;
   } else if (size === "md") {
     number = 60;
   }
@@ -34,7 +34,7 @@ const Img = styled.img`
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border-radius: 50%;
   padding: 6px;
-  border: 3px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
 const Text = styled.div`

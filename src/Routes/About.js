@@ -7,6 +7,39 @@ const ani__bounce = keyframes`
   0% { transform: translateY(-50px); opacity: 0; }
 `;
 
+const ani__rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+`;
+
+const ani__combine = keyframes`
+  0% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-5px,-5px);
+  }
+  100% {
+    transform: translate(-12px, -12px);
+  }
+`;
+
+const ani__combine2 = keyframes`
+  0% {
+    transform: translate(-27px, -27px);
+  }
+  50% {
+    transform: translate(-13px,-13px);
+  }
+  100% {
+    transform: translate(-27px, -27px);
+  }
+`;
+
 const Wrapper = styled.div`
   width: 100%;
   max-width: ${(props) => props.theme.maxWidth};
@@ -19,45 +52,104 @@ const AboutContainer = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   padding-top: 50px;
-  margin-bottom: 80px;
 `;
 
 const AvatarColumn = styled.div`
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: flex-end;
   align-self: baseline;
   flex-direction: column;
-  overflow: hidden;
+  border: 2px solid ${(props) => props.theme.black};
+  position: relative;
+  animation: ${ani__bounce} 1s;
+  &::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid ${(props) => props.theme.black};
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    border-radius: 50%;
+    background-color: ${(props) => props.theme.white};
+    transform-origin: 50% 65%;
+    animation: ${ani__rotate} 3s linear infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid ${(props) => props.theme.black};
+    transform: translate(-20px, -20px);
+  }
 `;
 
-const Avatar = styled.img`
-  animation: ${ani__bounce} 1.5s;
+const Avatar = styled.img``;
+
+const Square = styled.div`
+  width: 180px;
+  height: 60px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+  background-color: ${(props) => props.theme.white};
+  border: 2px solid ${(props) => props.theme.black};
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: ${(props) => props.theme.white};
+    border: 2px solid ${(props) => props.theme.black};
+  }
+  &::before {
+    transform: translate(-12px, -12px);
+    animation: ${ani__combine} 2s linear infinite;
+  }
+  &::after {
+    content: "YUNA LEE";
+    transform: translate(-27px, -27px);
+    animation: ${ani__combine2} 2s linear infinite;
+  }
 `;
 
 const InfoColumn = styled.div`
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-self: end;
   text-align: right;
+  padding-top: 20px;
   padding-right: 40px;
   font-weight: 700;
 `;
 
 const Name = styled.div`
   font-size: 30px;
+  font-weight: 600;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 `;
 
 const Title = styled.div`
   font-size: 20px;
   font-weight: 700;
-  background-color: ${(props) => props.theme.lightGray};
-  padding: 4px 6px;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+  padding: 6px 0;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  border-top: 2px solid ${(props) => props.theme.black};
 `;
 
 const Info = styled.div``;
@@ -76,23 +168,26 @@ const Text = styled.p`
   margin-top: 12px;
 `;
 
+const Wrap = styled.div`
+  margin: 60px 0 80px;
+`;
+
+const ETitle = styled(Title)`
+  border-top: 2px solid ${(props) => props.theme.black};
+  margin-bottom: 0;
+  text-align: right;
+`;
+
 const Skills = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   flex-wrap: wrap;
   animation: ${ani__bounce} 1s;
-  border-top: 1px solid ${(props) => props.theme.black};
-  padding-top: 30px;
+  padding-top: 50px;
 `;
 
 const ESkill = styled(Skill)``;
-
-const Img = styled.img`
-  margin-top: 40px;
-  animation: ${ani__bounce} 1.5s;
-`;
 
 export default () => {
   console.log(data);
@@ -101,14 +196,12 @@ export default () => {
       <AboutContainer>
         <AvatarColumn>
           <Avatar src={data[3]} alt="아바타" />
-          <Skills>
-            <ESkill />
-          </Skills>
+          <Square />
         </AvatarColumn>
         <InfoColumn>
-          <Name>이유나 / YUNA LEE</Name>
           <Info>
             <Experience>
+              <Name>이유나</Name>
               <Title>EXPERIENCE</Title>
               <Text>(주)볼록 웹, 모바일 디자인</Text>
               <Text>싸이월드 X 볼록 "싸이북" 책 &amp; 모바일</Text>
@@ -126,10 +219,15 @@ export default () => {
               <Text>컬러리스트 산업기사</Text>
               <Text>GTQ 포토샵 1급 한국생산성본분 발급</Text>
             </Certificate>
-            {/* <Img src={data[9]} alt="이미지" /> */}
           </Info>
         </InfoColumn>
       </AboutContainer>
+      <Wrap>
+        <ETitle>SKILLS</ETitle>
+        <Skills>
+          <ESkill />
+        </Skills>
+      </Wrap>
     </Wrapper>
   );
 };

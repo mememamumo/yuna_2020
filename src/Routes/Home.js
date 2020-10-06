@@ -62,7 +62,8 @@ const ani__bounce2 = keyframes`
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 440px);
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  ${(props) => props.theme.grid};
 `;
 
 const Main = styled.div`
@@ -265,7 +266,7 @@ export default () => {
         </Main>
         <ImageWrap>
           <BigImage src={data[8]} alt="배경 이미지 1" />
-          <SmallImage src={data[1]} alt="배경 이미지 2" />
+          <SmallImage src={data[4]} alt="배경 이미지 2" />
         </ImageWrap>
         <Triangle>
           <p></p>

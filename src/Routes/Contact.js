@@ -7,7 +7,9 @@ const ani__bounce = keyframes`
   0% { transform: translateY(-250px); opacity: 0; }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  ${(props) => props.theme.grid}
+`;
 
 const Background = styled.div`
   width: 100%;
@@ -64,7 +66,7 @@ export default () => {
   console.log(data[1]);
   return (
     <>
-      <Background bg={data[5]}></Background>
+      <Background bg={data[4]}></Background>
       <Wrapper>
         <InfoColumn>
           <Name>이유나</Name>
