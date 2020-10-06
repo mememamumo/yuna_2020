@@ -95,11 +95,12 @@ const Img = styled.img`
 `;
 
 export default () => {
+  console.log(data);
   return (
     <Wrapper>
       <AboutContainer>
         <AvatarColumn>
-          <Avatar src={data[2]} alt="아바타" />
+          <Avatar src={data[3]} alt="아바타" />
           <Skills>
             <ESkill />
           </Skills>
@@ -125,7 +126,7 @@ export default () => {
               <Text>컬러리스트 산업기사</Text>
               <Text>GTQ 포토샵 1급 한국생산성본분 발급</Text>
             </Certificate>
-            <Img src={data[1]} alt="이미지" />
+            {/* <Img src={data[9]} alt="이미지" /> */}
           </Info>
         </InfoColumn>
       </AboutContainer>

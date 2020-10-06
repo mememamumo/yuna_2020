@@ -264,7 +264,7 @@ export default () => {
           </SubTitle>
         </Main>
         <ImageWrap>
-          <BigImage src={data[0]} alt="배경 이미지 1" />
+          <BigImage src={data[8]} alt="배경 이미지 1" />
           <SmallImage src={data[1]} alt="배경 이미지 2" />
         </ImageWrap>
         <Triangle>

@@ -64,7 +64,7 @@ export default () => {
   console.log(data[1]);
   return (
     <>
-      <Background bg={data[1]}></Background>
+      <Background bg={data[5]}></Background>
       <Wrapper>
         <InfoColumn>
           <Name>이유나</Name>
