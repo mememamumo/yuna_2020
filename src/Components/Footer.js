@@ -16,7 +16,7 @@ const FooterWrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   min-height: 230px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 50px 0;
 `;
 
 const FooterColumn = styled.ul`
