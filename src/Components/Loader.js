@@ -33,12 +33,12 @@ const Circle = styled.div`
   width: 110px;
   height: 110px;
   background-color: ${(props) => props.theme.pointHoverColor};
-	animation: ${ani__circle} 2s 1s infinite alternate;
+	animation: ${ani__circle} 1s infinite alternate;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%)
-	z-index: 20;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
 `;
 
 const Loader = () => {
