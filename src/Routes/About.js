@@ -16,30 +16,6 @@ const ani__rotate = keyframes`
   }
 `;
 
-const ani__combine = keyframes`
-  0% {
-    transform: translate(-12px, -12px);
-  }
-  50% {
-    transform: translate(-5px,-5px);
-  }
-  100% {
-    transform: translate(-12px, -12px);
-  }
-`;
-
-const ani__combine2 = keyframes`
-  0% {
-    transform: translate(-27px, -27px);
-  }
-  50% {
-    transform: translate(-13px,-13px);
-  }
-  100% {
-    transform: translate(-27px, -27px);
-  }
-`;
-
 const Wrapper = styled.div`
   width: 100%;
   max-width: ${(props) => props.theme.maxWidth};
@@ -52,6 +28,10 @@ const AboutContainer = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   padding-top: 50px;
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+    padding: 50px 14px 0;
+  }
 `;
 
 const AvatarColumn = styled.div`
@@ -72,7 +52,6 @@ const AvatarColumn = styled.div`
     top: 50px;
     right: 70px;
     border-radius: 50%;
-    background-color: ${(props) => props.theme.white};
     transform-origin: 50% 65%;
     animation: ${ani__rotate} 3s linear infinite;
   }
@@ -86,43 +65,13 @@ const AvatarColumn = styled.div`
     border: 2px solid ${(props) => props.theme.black};
     transform: translate(-20px, -20px);
   }
+  @media ${(props) => props.theme.mobile} {
+    width: 90%;
+    align-self: center;
+  }
 `;
 
 const Avatar = styled.img``;
-
-const Square = styled.div`
-  width: 180px;
-  height: 60px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  bottom: 100px;
-  left: 60px;
-  background-color: ${(props) => props.theme.white};
-  border: 2px solid ${(props) => props.theme.black};
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: ${(props) => props.theme.white};
-    border: 2px solid ${(props) => props.theme.black};
-  }
-  &::before {
-    transform: translate(-12px, -12px);
-    animation: ${ani__combine} 2s linear infinite;
-  }
-  &::after {
-    content: "YUNA LEE";
-    transform: translate(-27px, -27px);
-    animation: ${ani__combine2} 2s linear infinite;
-  }
-`;
 
 const InfoColumn = styled.div`
   width: 50%;
@@ -131,9 +80,12 @@ const InfoColumn = styled.div`
   flex-direction: column;
   align-self: end;
   text-align: right;
-  padding-top: 20px;
   padding-right: 40px;
   font-weight: 700;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    padding-right: 0;
+  }
 `;
 
 const Name = styled.div`
@@ -141,6 +93,10 @@ const Name = styled.div`
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  @media ${(props) => props.theme.mobile} {
+    display: flex;
+    justify-content: flex-start;
+  }
 `;
 
 const Title = styled.div`
@@ -150,12 +106,17 @@ const Title = styled.div`
   margin-bottom: 20px;
   letter-spacing: 2px;
   border-top: 2px solid ${(props) => props.theme.black};
+  @media ${(props) => props.theme.mobile} {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
 `;
 
 const Info = styled.div``;
 
 const Experience = styled.div`
-  margin-top: 50px;
+  margin-top: 30px;
 `;
 
 const Certificate = styled.div`
@@ -166,16 +127,28 @@ const Text = styled.p`
   font-weight: 500;
   font-size: 16px;
   margin-top: 12px;
+  @media ${(props) => props.theme.mobile} {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
 `;
 
 const Wrap = styled.div`
   margin: 60px 0 80px;
+  @media ${(props) => props.theme.mobile} {
+    padding: 0 14px;
+    margin: 50px 0 20px;
+  }
 `;
 
 const ETitle = styled(Title)`
   border-top: 2px solid ${(props) => props.theme.black};
   margin-bottom: 0;
   text-align: right;
+  @media ${(props) => props.theme.mobile} {
+    padding-top: 10px;
+  }
 `;
 
 const Skills = styled.ul`
@@ -185,6 +158,9 @@ const Skills = styled.ul`
   flex-wrap: wrap;
   animation: ${ani__bounce} 1s;
   padding-top: 50px;
+  @media ${(props) => props.theme.mobile} {
+    padding-top: 30px;
+  }
 `;
 
 const ESkill = styled(Skill)``;
@@ -196,7 +172,6 @@ export default () => {
       <AboutContainer>
         <AvatarColumn>
           <Avatar src={data[3]} alt="아바타" />
-          <Square />
         </AvatarColumn>
         <InfoColumn>
           <Info>

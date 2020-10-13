@@ -83,6 +83,7 @@ const Name = styled.div`
   justify-content: flex-start;
   margin-top: 70px;
   animation: ${ani__bounce} 1s;
+  color: ${(props) => props.theme.white};
 `;
 
 const Title = styled.div`
@@ -92,6 +93,7 @@ const Title = styled.div`
   margin-top: 100px;
   margin-bottom: 150px;
   animation: ${ani__bounce1} 1.3s;
+  color: ${(props) => props.theme.pointHoverColor};
 `;
 
 const SubTitle = styled.div`
@@ -265,8 +267,8 @@ export default () => {
           </SubTitle>
         </Main>
         <ImageWrap>
-          <BigImage src={data[8]} alt="배경 이미지 1" />
-          <SmallImage src={data[4]} alt="배경 이미지 2" />
+          <BigImage src={data[1]} alt="배경 이미지 1" />
+          <SmallImage src={data[2]} alt="배경 이미지 2" />
         </ImageWrap>
         <Triangle>
           <p></p>

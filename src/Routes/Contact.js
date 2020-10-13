@@ -28,7 +28,7 @@ const InfoColumn = styled.div`
   font-size: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 	align-items: center;
 	max-width: 50%
   text-align: center;
@@ -36,7 +36,12 @@ const InfoColumn = styled.div`
 	z-index: 8;
 	min-height: calc(100vh - 440px);
 	letter-spacing: 2px;
-	animation: ${ani__bounce} 2s;
+  animation: ${ani__bounce} 2s;
+  padding-top: 130px;
+  @media ${(props) => props.theme.mobile} {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 `;
 
 const Name = styled.div`
@@ -55,18 +60,24 @@ const Title = styled.div`
 const Text = styled.div`
   margin-top: 20px;
   color: ${(props) => props.theme.white};
+  @media ${(props) => props.theme.mobile} {
+    font-size: 20px;
+  }
 `;
 
 const TextLink = styled.a`
   margin-top: 20px;
   color: ${(props) => props.theme.white};
+  @media ${(props) => props.theme.mobile} {
+    font-size: 20px;
+  }
 `;
 
 export default () => {
   console.log(data[1]);
   return (
     <>
-      <Background bg={data[4]}></Background>
+      <Background bg={data[1]}></Background>
       <Wrapper>
         <InfoColumn>
           <Name>이유나</Name>

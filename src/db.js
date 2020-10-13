@@ -3,11 +3,32 @@ const project = [
     id: "1",
     title: "NODE TUBE",
     thumbnail:
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s3.jpg?raw=true",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_01_timeline.png",
     images: [
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s1.jpg?raw=true",
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s2.jpg?raw=true",
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s3.jpg?raw=true"
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_01_timeline.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_01_login.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_02_post.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_02_video.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_02_reply.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_03_upload.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_03_editvideo.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_04_profile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_04_editprofile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/nodetube_05_search.png"
+    ],
+    mobileImages: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_01_login.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_01_popup.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_01_timeline.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_02_video.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_02_reply.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_02_editvideo.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_03_profileme.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_03_editprofile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_03_profile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_04_upload.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_05_search.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_nodetube_02_fullpost.png"
     ],
     year: "2019",
     front: "100%",
@@ -15,7 +36,25 @@ const project = [
     github: ["https://github.com/mememamumo/nodeTube"],
     link: "https://desolate-bastion-42349.herokuapp.com",
     description:
-      "품에 풀밭에 날카로우나 자신과 거선의 없으면 영원히 말이다. 피어나는 남는 되려니와, 그들을 목숨이 몸이 청춘의 대한 아름다우냐? 이상을 커다란 내는 우는 피다. 인간의 안고, 기관과 바로 가치를 풀이 이 말이다. 착목한는 영원히 끝에 그들의 이것이다. 타오르고 스며들어 피가 풍부하게 실현에 아름다우냐? 원질이 꽃이 무엇이 무엇을 그들을 얼마나 옷을 투명하되 곳이 보라. 주며, 그들에게 역사를 가는 것이다. 싸인 거친 이 용감하고 것은 뿐이다. 하는 바로 열락의 끓는다.",
+      "노드튜브는 유저들이 동영상을 공유하고, 서로 교류할 수 있는 간단한 웹 사이트로, NodeJs와 VanillaJs를 사용하여 구축하였습니다.",
+    list: [
+      "회원가입, 로그인, 로그아웃",
+      "Passport를 이용한 소셜계정 연동",
+      "Facebook/ Kakao/ Naver/ Github/ Google",
+      "유저정보 수정",
+      "프로필 이미지/ 이름/ 비밀번호",
+      "동영상 업로드 및 수정, 삭제",
+      "동영상 업로드 시, 썸네일 노출",
+      "동영상 재생, 컨트롤 생성",
+      "썸네일을 hover 시, 음소거 상태로 재생",
+      "동영상 조회수 체크",
+      "동영상 검색",
+      "댓글 갯수 체크, 등록 및 삭제",
+      "댓글에 프로필 사진과 사용자 이름 표시",
+      "Modal",
+      "Loading",
+      "Flash Message"
+    ],
     skills: [
       "Javascript",
       "ES6",
@@ -38,10 +77,27 @@ const project = [
     id: "2",
     title: "PRISMA SOCIAL",
     thumbnail:
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s5.jpg?raw=true",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_04_profile.png",
     images: [
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s6.jpg?raw=true",
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s7.jpg?raw=true"
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_02_login.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_01_timeline.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_07_seepost.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_04_profile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_04_following.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_08_upload.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_04_edit.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/prismasocial_05_explore.png"
+    ],
+    mobileImages: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_01_login.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_02_timeline.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_03_following.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_03_profile.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_05_explore.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_05_explore_02.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_06_upload.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_04_seepost.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_prismasocial_07_editprofile.png"
     ],
     year: "2020",
     front: "100%",
@@ -52,7 +108,24 @@ const project = [
     ],
     link: "https://prismasocial.netlify.app/#/",
     description:
-      "피가 설레는 만천하의 바로 이상은 들어 그들의 듣기만 평화스러운 보라. 이상이 속잎나고, 황금시대의 곳으로 청춘을 칼이다. 같이, 우리 꾸며 품으며, 돋고, 것이다. 할지라도 인생을 더운지라 피고 실현에 하여도 영원히 교향악이다. 능히 오직 군영과 아름다우냐? 창공에 생의 있으며, 있으랴? 아니한 동산에는 천하를 찾아다녀도, 이상 힘있다. 생명을 피어나는 못할 생생하며, 대중을 아니다. 얼마나 부패를 창공에 이것이다. 어디 옷을 인생에 그들에게 황금시대다. 아니한 미묘한 있으며, 인간의 노년에게서 낙원을 피는 청춘은 약동하다.",
+      "프리즈마소셜은 사진을 공유하고, 팔로우/발도장/댓글/알람 기능이 있는 웹 사이트로, GraphQL/Apollo와 React를 사용하여 구축하였습니다.",
+    list: [
+      "회원가입, 로그인, 로그아웃",
+      "유저정보 수정",
+      "프로필 이미지/ 사용자 이름/ 성, 이름/ 소개",
+      "유저간 팔로우, 언팔로우",
+      "사진, 글 업로드",
+      "사진 업로드 시, 타임라인에 노출",
+      "포스트의 발도장/ 발도장 유저 목록/ 댓글",
+      "포스트 검색",
+      "발도장 알림",
+      "댓글 등록, 갯수 체크",
+      "댓글에 사용자 이름 표시",
+      "탐험 페이지 (전체 유저의 포스트를 볼 수 있는 페이지)",
+      "Popup",
+      "Loading",
+      "Toast Message"
+    ],
     skills: [
       "React",
       "Javascript",
@@ -65,24 +138,9 @@ const project = [
       "Apollo",
       "Prisma",
       "Git"
-    ]
-  },
-  {
-    id: "3",
-    title: "Portfolio",
-    thumbnail:
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s7.jpg?raw=true",
-    images: [
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s3.jpg?raw=true",
-      "https://github.com/mememamumo/yuna_2020/blob/master/src/Assets/Images/sample/s5.jpg?raw=true"
     ],
-    year: "2020",
-    front: "100%",
-    github: ["https://github.com/mememamumo/yuna_2020"],
-    link: "https://github.com/mememamumo/yuna_2020",
-    description:
-      "피가 설레는 만천하의 바로 이상은 들어 그들의 듣기만 평화스러운 보라. 이상이 속잎나고, 황금시대의 곳으로 청춘을 칼이다.",
-    skills: ["React", "Javascript", "ES6", "Babel", "Git"]
+    notice:
+      "해당 사이트는 첫 연결 시, 20-30초가 소요됩니다. 클릭하시고 조금만 기다려주세요."
   }
 ];
 

@@ -19,7 +19,7 @@ const MetaHeader = styled.div`
   height: 300px;
   background-image: url(${(props) => props.bg});
   background-size: cover;
-  background-position: center;
+  background-position: center 71%;
 `;
 
 const Area = styled.div`
@@ -42,15 +42,24 @@ const MetaInfo = styled.div`
   padding: 90px 0 70px;
   font-weight: 700;
   font-size: 20px;
+  @media ${(props) => props.theme.mobile} {
+    padding: 90px 14px 70px;
+  }
 `;
 
 const MetaLink = styled.div`
   margin: 20px 0 50px;
+  @media ${(props) => props.theme.mobile} {
+    margin: 20px 0 10px;
+  }
 `;
 
 const Githubs = styled.div`
   display: flex;
   margin-bottom: 10px;
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const GithubLink = styled.a`
@@ -65,6 +74,9 @@ const GithubLink = styled.a`
   }
   &:hover svg {
     fill: ${(props) => props.theme.pointHoverColor};
+  }
+  @media ${(props) => props.theme.mobile} {
+    margin-top: 10px;
   }
 `;
 
@@ -140,10 +152,46 @@ const Description = styled.div`
   line-height: 1.4;
 `;
 
-const MetaIamges = styled.div``;
+const MetaImages = styled.div``;
 
 const Img = styled.img`
   margin-top: 10px;
+`;
+
+const MobileImages = styled.div`
+  margin-top: 10px;
+  padding: 60px 10% 50px;
+  background-color: ${(props) => props.theme.bgBlackColor};
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+`;
+
+const MobileImg = styled.img`
+  width: 30%;
+  margin-top: 60px;
+`;
+
+const Functions = styled.ul`
+  margin-top: 30px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @media ${(props) => props.theme.mobile} {
+    margin-left: 20px;
+  }
+`;
+
+const FuncList = styled.li`
+  width: 50%;
+  padding-left: 20px;
+  border-left: 5px solid ${(props) => props.theme.lightGray};
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 const SeeItem = () => {
@@ -157,6 +205,7 @@ const SeeItem = () => {
             title={item.title}
             thumbnail={item.thumbnail}
             images={item.images}
+            mobileImages={item.mobileImages}
             year={item.year}
             front={item.front}
             back={item.back}
@@ -165,6 +214,7 @@ const SeeItem = () => {
             github={item.github}
             link={item.link}
             notice={item.notice}
+            list={item.list}
           />
         );
       })}
@@ -179,6 +229,7 @@ const MapToItem = withRouter(
     title,
     thumbnail,
     images,
+    mobileImages,
     year,
     front,
     back,
@@ -186,7 +237,8 @@ const MapToItem = withRouter(
     skills,
     github,
     link,
-    notice
+    notice,
+    list
   }) => {
     const page = pathname.split("/")[2];
     return (
@@ -233,8 +285,13 @@ const MapToItem = withRouter(
                       ))}
                     </Skills>
                     <Description>{description}</Description>
+                    <Functions>
+                      {list.map((func, index) => (
+                        <FuncList key={index}>{func}</FuncList>
+                      ))}
+                    </Functions>
                   </MetaInfo>
-                  <MetaIamges>
+                  <MetaImages>
                     {images.map((image, index) => (
                       <Img
                         key={index}
@@ -242,7 +299,16 @@ const MapToItem = withRouter(
                         alt={`${title}의 이미지 ${index + 1}`}
                       />
                     ))}
-                  </MetaIamges>
+                  </MetaImages>
+                  <MobileImages>
+                    {mobileImages.map((image, index) => (
+                      <MobileImg
+                        key={index}
+                        src={image}
+                        alt={`${title}의 이미지 ${index + 1}`}
+                      />
+                    ))}
+                  </MobileImages>
                 </MetaContainer>
               </ItemBox>
             </Wrapper>

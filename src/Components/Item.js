@@ -26,6 +26,14 @@ const Wrapper = styled.li`
     margin: 20px 20px 20px 0;
   }
   animation: ${ani__bounce} 1s;
+  @media ${(props) => props.theme.mobile} {
+    &:nth-child(2n) {
+      margin: 20px 0 20px;
+    }
+    &:nth-child(odd) {
+      margin: 20px 0 20px;
+    }
+  }
 `;
 
 const Header = styled.div`
@@ -75,11 +83,15 @@ const Thumbnail = styled.div`
   padding-top: 450px;
   background-image: url(${(props) => props.bg});
   background-size: cover;
-  background-position: center;
+  background-position: top;
   cursor: pointer;
   &:hover {
     background-size: 200%;
     animation: ${thumb__ani} 0.3s;
+  }
+  @media ${(props) => props.theme.mobile} {
+    max-width: 100%;
+    padding-top: 100%;
   }
 `;
 

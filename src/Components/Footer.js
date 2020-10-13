@@ -9,6 +9,9 @@ const Footer = styled.footer`
   font-size: 18px;
   position: relative;
   z-index: 1;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 14px;
+  }
 `;
 
 const FooterWrapper = styled.div`
@@ -17,6 +20,9 @@ const FooterWrapper = styled.div`
   min-height: 230px;
   margin: 0 auto;
   padding: 50px 0;
+  @media ${(props) => props.theme.mobile} {
+    padding: 50px 14px;
+  }
 `;
 
 const FooterColumn = styled.ul`
