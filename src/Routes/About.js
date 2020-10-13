@@ -80,7 +80,7 @@ const InfoColumn = styled.div`
   flex-direction: column;
   align-self: end;
   text-align: right;
-  padding-right: 40px;
+  padding-right: 50px;
   font-weight: 700;
   @media ${(props) => props.theme.mobile} {
     width: 100%;
