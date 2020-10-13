@@ -183,13 +183,11 @@ const Triangle = styled.div`
   @media ${(props) => props.theme.mobile} {
     top: 70px;
     right: 70px;
-    border-bottom: 132.2px solid black;
+    border-bottom: 132.2px solid ${props => props.theme.lightGray};
     border-left: 77px solid transparent;
     border-right: 77px solid transparent;
     p {
-      top: -60.5px;
-      left: -147px;
-      transform: scale(0.5);
+      display: none;
     }
   }
 `;
@@ -215,13 +213,11 @@ const Triangle2 = styled.div`
     border-right: 147px solid transparent;
   }
   @media ${(props) => props.theme.mobile} {
-    border-bottom: 132.2px solid black;
+    border-bottom: 132.2px solid ${props => props.theme.lightGray};
     border-left: 77px solid transparent;
     border-right: 77px solid transparent;
     p {
-      top: -60.5px;
-      left: -147px;
-      transform: scale(0.5);
+      display: none;
     }
   }
 `;
