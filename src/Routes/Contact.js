@@ -9,6 +9,9 @@ const ani__bounce = keyframes`
 
 const Wrapper = styled.div`
   ${(props) => props.theme.grid}
+  @media ${(props) => props.theme.mobile} {
+    min-height: calc(100vh - 390px);
+  }
 `;
 
 const Background = styled.div`
@@ -49,6 +52,9 @@ const Name = styled.div`
   background-color: ${(props) => props.theme.white};
   padding: 2px 4px;
   animation: ${ani__bounce} 1s;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 28px;
+  }
 `;
 
 const Title = styled.div`
@@ -56,12 +62,17 @@ const Title = styled.div`
   padding-bottom: 10px;
   color: ${(props) => props.theme.white};
   border-bottom: 4px solid ${(props) => props.theme.white};
+  @media ${(props) => props.theme.mobile} {
+    font-size: 20px;
+  }
 `;
+
 const Text = styled.div`
   margin-top: 20px;
   color: ${(props) => props.theme.white};
   @media ${(props) => props.theme.mobile} {
     font-size: 20px;
+    font-weight: 400;
   }
 `;
 
@@ -70,6 +81,7 @@ const TextLink = styled.a`
   color: ${(props) => props.theme.white};
   @media ${(props) => props.theme.mobile} {
     font-size: 20px;
+    font-weight: 400;
   }
 `;
 

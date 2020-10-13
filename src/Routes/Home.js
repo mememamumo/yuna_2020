@@ -64,6 +64,9 @@ const Wrapper = styled.div`
   min-height: calc(100vh - 440px);
   padding-bottom: 80px;
   ${(props) => props.theme.grid};
+  @media ${(props) => props.theme.mobile} {
+    min-height: calc(100vh - 390px);
+  }
 `;
 
 const Main = styled.div`
@@ -83,7 +86,7 @@ const Name = styled.div`
   justify-content: flex-start;
   margin-top: 70px;
   animation: ${ani__bounce} 1s;
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.lightGray};
 `;
 
 const Title = styled.div`
@@ -177,6 +180,18 @@ const Triangle = styled.div`
     border-left: 147px solid transparent;
     border-right: 147px solid transparent;
   }
+  @media ${(props) => props.theme.mobile} {
+    top: 70px;
+    right: 70px;
+    border-bottom: 132.2px solid black;
+    border-left: 77px solid transparent;
+    border-right: 77px solid transparent;
+    p {
+      top: -60.5px;
+      left: -147px;
+      transform: scale(0.5);
+    }
+  }
 `;
 
 const Triangle2 = styled.div`
@@ -198,6 +213,16 @@ const Triangle2 = styled.div`
     border-bottom: 252.84px solid white;
     border-left: 147px solid transparent;
     border-right: 147px solid transparent;
+  }
+  @media ${(props) => props.theme.mobile} {
+    border-bottom: 132.2px solid black;
+    border-left: 77px solid transparent;
+    border-right: 77px solid transparent;
+    p {
+      top: -60.5px;
+      left: -147px;
+      transform: scale(0.5);
+    }
   }
 `;
 

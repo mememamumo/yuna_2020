@@ -39,6 +39,9 @@ const ENavLink = styled(NavLink)`
     top: 1px;
     animation: ${circle__ani} 0.3s;
   }
+  @media ${(props) => props.theme.mobile} {
+    font-size: 26px;
+  }
 `;
 
 export default () => {

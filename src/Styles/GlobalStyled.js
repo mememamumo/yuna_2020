@@ -21,6 +21,9 @@ export default createGlobalStyle`
 		display: flex;
 		flex-direction: column;
 		padding-top: 200px;
+		@media ${(props) => props.theme.mobile} {
+			padding-top: 160px;
+		}
 	}
 	a {
 		display: block;

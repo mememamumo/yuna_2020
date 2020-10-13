@@ -9,6 +9,9 @@ const Header = styled.header`
   position: fixed;
   top: 40px;
   z-index: 10;
+  @media ${(props) => props.theme.mobile} {
+    top: 0;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -42,6 +45,14 @@ const LogoLink = styled(Link)`
   }
   &:hover::before {
     background-color: ${(props) => props.theme.pointHoverColor};
+  }
+  @media ${(props) => props.theme.mobile} {
+    width: 140px;
+    height: 140px;
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
   }
 `;
 

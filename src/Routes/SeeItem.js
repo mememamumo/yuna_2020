@@ -19,7 +19,18 @@ const MetaHeader = styled.div`
   height: 300px;
   background-image: url(${(props) => props.bg});
   background-size: cover;
-  background-position: center 71%;
+  background-position: center 69%;
+  @media ${(props) => props.theme.mobile} {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(256,256,256,0.3);
+      width: 100%;
+      height: 100%;
+    }
+  }
 `;
 
 const Area = styled.div`
@@ -33,6 +44,9 @@ const Title = styled.div`
   font-weight: 700;
   position: absolute;
   bottom: -50px;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 50px;
+  }
 `;
 
 const MetaInfo = styled.div`
@@ -84,16 +98,29 @@ const DemoLink = styled.a`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  display: inline-block;
+  display: block;
+  position: relative;
   svg {
     transition: 0.3s;
   }
   &:hover svg {
     fill: ${(props) => props.theme.pointHoverColor};
   }
+  p {
+    visibility: hidden;
+    opacity: 0;
+  }
   &:hover p {
+    visibility: visible;
     opacity: 1;
     color: ${(props) => props.theme.black};
+  }
+  @media ${(props) => props.theme.mobile} {
+    margin-bottom: 90px;
+    p {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 `;
 
@@ -101,9 +128,14 @@ const Notice = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
-  // background-color: ${(props) => props.theme.lightGray};
   padding: 4px 8px;
-  opacity: 0;
+  // dropdown point
+  position: absolute;
+  width: 500px;
+  word-wrap: normal;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 const Text = styled.span`

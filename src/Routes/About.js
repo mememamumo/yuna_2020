@@ -82,6 +82,7 @@ const InfoColumn = styled.div`
   text-align: right;
   padding-right: 50px;
   font-weight: 700;
+  position: relative;
   @media ${(props) => props.theme.mobile} {
     width: 100%;
     padding-right: 0;
@@ -93,6 +94,8 @@ const Name = styled.div`
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: left;
   @media ${(props) => props.theme.mobile} {
     display: flex;
     justify-content: flex-start;
@@ -102,13 +105,14 @@ const Name = styled.div`
 const Title = styled.div`
   font-size: 20px;
   font-weight: 700;
-  padding: 6px 0;
-  margin-bottom: 20px;
+  padding: 17px 0 0 14px;
+  margin-bottom: 30px;
   letter-spacing: 2px;
+  text-align: left;
   border-top: 2px solid ${(props) => props.theme.black};
   @media ${(props) => props.theme.mobile} {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-top: 10px;
   }
 `;
@@ -116,7 +120,9 @@ const Title = styled.div`
 const Info = styled.div``;
 
 const Experience = styled.div`
-  margin-top: 30px;
+  @media ${(props) => props.theme.mobile} {
+    margin-top: 30px;
+  }
 `;
 
 const Certificate = styled.div`
@@ -126,11 +132,13 @@ const Certificate = styled.div`
 const Text = styled.p`
   font-weight: 500;
   font-size: 16px;
-  margin-top: 12px;
+  margin-top: 15px;
+  margin-right: 40px;
   @media ${(props) => props.theme.mobile} {
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
+    margin-right: 0;
   }
 `;
 
@@ -145,7 +153,7 @@ const Wrap = styled.div`
 const ETitle = styled(Title)`
   border-top: 2px solid ${(props) => props.theme.black};
   margin-bottom: 0;
-  text-align: right;
+  text-align: left;
   @media ${(props) => props.theme.mobile} {
     padding-top: 10px;
   }
