@@ -3,26 +3,26 @@ import styled, { keyframes } from "styled-components";
 
 const ani__circle = keyframes`
 	0% {
-		background-color: #wheat;
+		background-color: yellowgreen;
 	}
 	25% {
-		background-color: #CD853E;
+		background-color: darkseagreen;
 	}
 	50% {
-		background-color: #F4D300;
+		background-color: seagreen;
 	}
 	75% {
-		background-color: #wheat;
+		background-color: yellowgreen;
 	}
 	100% {
-		background-color: #CD853E;
+		background-color: darkseagreen;
 	}
 `;
 
 const Circle = styled.div`
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.pointHoverColor};
+  background-color: ${(props) => props.theme.pointColor};
 	animation: ${ani__circle} 1s infinite alternate;
 	position: absolute;
 	top: 0;
