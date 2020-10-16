@@ -241,6 +241,7 @@ const SeeItem = () => {
             year={item.year}
             front={item.front}
             back={item.back}
+            publishing={item.publishing}
             description={item.description}
             skills={item.skills}
             github={item.github}
@@ -265,6 +266,7 @@ const MapToItem = withRouter(
     year,
     front,
     back,
+    publishing,
     description,
     skills,
     github,
@@ -293,22 +295,25 @@ const MapToItem = withRouter(
                   <MetaInfo>
                     <MetaLink>
                       <Githubs>
-                        {github.map((git, index) => (
+                        {github ? (github.map((git, index) => (
                           <GithubLink key={index} href={git} target="_blank">
                             <Github size={22} />
                             <Text key={index}>{git.split("/")[4]}</Text>
                           </GithubLink>
-                        ))}
+                        ))) : null}
                       </Githubs>
-                      <DemoLink href={link} target="_blank">
-                        <Link size={20} />
-                        <Text>사이트 보기</Text>
-                        {notice ? <Notice>{notice}</Notice> : null}
-                      </DemoLink>
+                      {link ? (
+                        <DemoLink href={link} target="_blank">
+                          <Link size={20} />
+                          <Text>사이트 보기</Text>
+                          {notice ? <Notice>{notice}</Notice> : null}
+                        </DemoLink>
+                      ) : null}
                     </MetaLink>
                     <WhatIDo>
-                      <DoList>Front-end: {front}</DoList>
+                      {front ? <DoList>Front-end: {front}</DoList> : null}
                       {back ? <DoList>Back-end: {back}</DoList> : null}
+                      {publishing ? <DoList>Web-publishing: {publishing}</DoList> : null}
                     </WhatIDo>
                     <Skills>
                       <SkillTitle>Skills</SkillTitle>

@@ -141,6 +141,87 @@ const project = [
     ],
     notice:
       "크롬 브라우저로 확인해주세요. 해당 사이트는 첫 연결 시, 20-30초가 소요됩니다. 클릭하시고 조금만 기다려주세요."
+  },
+  {
+    id: "3",
+    title: "BAND BOOK",
+    thumbnail:
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_main.jpg",
+    images: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_main.jpg"
+    ],
+    mobileImages: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_01.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_02.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_03.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_04.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_05.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_06.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_07.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_08.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_09.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_10.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_11.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_band_12.png"
+    ],
+    year: "",
+    publishing: "100%",
+    description:
+      "볼록과 네이버밴드의 콜라보 프로젝트로 밴드의 데이터를 이용하여 책을 만드는 모바일 웹이다. 메인 페이지, 서브 페이지 - 총 59페이지",
+    list: [
+      "Main -1p",
+      "책 만들기 -31p",
+      "Preview -4p",
+      "Bookcart -5p",
+      "My page -5p",
+      "Guide -2p",
+      "Dialog -11p"
+    ],
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Javascript"
+    ]
+  },
+  {
+    id: "4",
+    title: "KIDSNOTE BOOK",
+    thumbnail:
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_01.png",
+    images: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_main.jpg"
+    ],
+    mobileImages: [
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_01.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_02.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_03.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_04.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_05.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_06_01.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_06_02.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_07.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_08.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_09.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_10.png",
+      "https://yuna2020.s3.ap-northeast-2.amazonaws.com/portfolio/m_kids_11.png"
+    ],
+    year: "",
+    publishing: "100%",
+    description:
+      "볼록과 키즈노트의 콜라보 프로젝트로 키즈노트의 알림장 데이터를 이용하여 책을 만드는 모바일 웹이다. 메인 페이지, 서브 페이지 - 총 26페이지",
+    list: [
+      "Main -1p",
+      "책 만들기 -9p",
+      "Preview -4p",
+      "Payment -2p",
+      "My page -8p",
+      "Guide -2p"
+    ],
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Javascript"
+    ]
   }
 ];
 
