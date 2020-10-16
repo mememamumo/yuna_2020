@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import data from "../db";
-import { Github, Link } from "../Components/Icons";
+import { Github, Demo } from "../Components/Icons";
 
 const Wrapper = styled.div`
   margin-top: 20px;
@@ -304,7 +304,7 @@ const MapToItem = withRouter(
                       </Githubs>
                       {link ? (
                         <DemoLink href={link} target="_blank">
-                          <Link size={20} />
+                          <Demo size={20} />
                           <Text>사이트 보기</Text>
                           {notice ? <Notice>{notice}</Notice> : null}
                         </DemoLink>

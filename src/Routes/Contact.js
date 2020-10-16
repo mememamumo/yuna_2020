@@ -40,7 +40,7 @@ const InfoColumn = styled.div`
 	min-height: calc(100vh - 440px);
 	letter-spacing: 2px;
   animation: ${ani__bounce} 2s;
-  padding-top: 130px;
+  padding: 130px 0;
   @media ${(props) => props.theme.mobile} {
     padding-top: 30px;
     padding-bottom: 50px;
