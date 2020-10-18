@@ -143,19 +143,12 @@ const LogoImg = styled.svg`
 const Circle = styled.div`
   position: absolute;
   bottom: -180px;
-  right: 20px;
-  width: 180px;
-  height: 180px;
+  right: 170px;
   background-color: ${props => props.theme.pointHoverColor};
-  border-radius: 50%;
-`;
-
-const ECircle = styled(Circle)`
-  background-color: ${props => props.theme.pointColor};
-  width: 130px;
-  height: 130px;
-  right: 150px;
+  width: 150px;
+  height: 150px;
   z-index: 0;
+  border-radius: 50%;
 `;
 
 export default () => {
@@ -167,7 +160,7 @@ export default () => {
           <AvatarColumn>
             <Avatar src={data[3]} alt="아바타" />
             <LogoImg bg={LogoHover} />
-            <ECircle />
+            <Circle />
           </AvatarColumn>
           <InfoColumn>
             <Info>
@@ -179,7 +172,6 @@ export default () => {
                 <Text>2014-2018 볼록 근무</Text>
                 <Text>2018-2019 몰타 어학연수</Text>
                 <Text>2019-2020 윙텍 근무</Text>
-                <Circle />
               </AboutColumn>
               <AboutColumn>
                 <Title>EXPERIENCE</Title>
