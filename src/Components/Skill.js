@@ -35,6 +35,7 @@ const Img = styled.img`
   border-radius: 50%;
   padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 `;
 
 const Text = styled.div`
