@@ -2,7 +2,6 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import data from "../images";
 import Skill from "../Components/Skill";
-import Logo from "../Assets/Images/Logo.svg";
 import LogoHover from "../Assets/Images/LogoHover.svg";
 
 const ani__bounce = keyframes`
